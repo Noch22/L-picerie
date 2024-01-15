@@ -44,7 +44,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].js',
-    publicPath: IS_DEV ? publicPath: '',
+    // publicPath: IS_DEV ? publicPath: '',
   },
   devtool: IS_DEV ? 'source-map' : false,
   resolve: {

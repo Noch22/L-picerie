@@ -14,6 +14,12 @@ wp_head();
     ?>
 </div>
 
+<div class="vertical_bar">
+    <h2>Bienvenue !</h2>
+</div>
+
+
+
 <style>
     #custom-header-bar {
         background-color: <?php echo get_option('custom_color_bar', '#001fbd'); ?>;

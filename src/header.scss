@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Dosis';
+    src: url('./fonts/dosis.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 #custom-header-bar {
     background-color: #f2f2f2;
     padding: 10px;
@@ -60,4 +68,31 @@ header {
 @keyframes marquee {
     0%   { transform: translate(0, 0); }
     100% { transform: translate(-100%, 0); }
+}
+
+
+.vertical_bar {
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 3vw;
+    height: 100%;
+    background-color: black;
+
+    h2 {
+        font-weight: bold;
+        font-size: 64px;
+        font-family: 'Dosis';
+        text-transform: uppercase;
+        position: absolute;
+        color: white;
+        writing-mode: tb-rl;
+        transform: rotate(-180deg);
+        text-orientation: mixed;
+        margin: 0;
+        padding: 0;
+        top: 100px;
+        right: 0;
+        left: -25px;
+    }
 }
