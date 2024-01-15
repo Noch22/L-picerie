@@ -1,5 +1,198 @@
+body {
+    background-color: var(--background-white);
+}
+
+
 .home_div {
-    img {
-        width: 3vw;
+
+    margin: 20vw 0 0 13vw;
+    display: flex;
+    flex-direction: row;
+    justify-items: first baseline;
+    position: relative;
+    z-index: 3;
+
+    .logo_cover {
+        background-color: #FFFFFF;
+        padding: 2vw;
+        border-radius: 50%;
+        width: 6vw;
+        height: 6vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+        width: 5vw;
+        }
+    }
+    
+}
+
+.home_div_text {
+    margin-left: 2vw;
+    h1{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 900;
+        font-size: 68px;
+        color: var(--white);
+    }
+
+    p {
+        color: var(--white);
+        font-family: 'Roboto', sans-serif;
+        font-weight: 300;
+        font-size: 20px;
+        width: 50%;
+    }
+}
+
+
+.cover_banner {
+    top: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    z-index: 0;
+
+}
+
+.cover_banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the opacity value as needed */
+  pointer-events: none; /* Ensure the pseudo-element doesn't interfere with clicks */
+}
+
+main {
+    .last_expo {
+        margin-top: 3vw;
+        display: flex;
+        flex-direction: row;
+        background-color: var(--white);
+        width: 1280px;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 15px;
+        position: relative;
+        .cover_expo {
+            width: 50%;
+            img {
+                border-radius: 15px 0 0 15px;
+            }
+
+        }
+        .text_expo {
+            width: 50%;
+
+            #badge {
+                background-color: var(--electric-blue);
+                width: 20%;
+                text-align: center;
+                color: var(--white);
+                font-family: 'Dosis', sans-serif;
+                font-weight: 500;
+                font-size: 16px;
+                letter-spacing: 3.20px;
+                word-wrap: break-word;
+                text-transform: uppercase;
+                border-radius: 15px;
+                padding: 0.3vw;
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 5vw;
+            }
+
+            .dates {
+                margin-top: 1vw;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+
+                p {
+                    color: black;
+                    font-size: 26px;
+                    font-family: Roboto;
+                    font-weight: 500;
+                    word-wrap: break-word;
+
+                    &:first-of-type {
+                        margin-right: 1vw;
+                    }
+
+                    &:last-of-type {
+                        margin-left: 1vw;
+                    }
+                }
+
+
+            }
+
+            #additional_txt {
+                width: 100%;
+                text-align: center;
+                color: black;
+                font-size: 16px;
+                font-family: Roboto;
+                font-weight: 300;
+                word-wrap: break-word;
+            }
+
+            h2 {
+                color: black;
+                font-size: 32px;
+                font-family: Roboto;
+                font-style: italic;
+                font-weight: 600;
+                word-wrap: break-word;
+                text-align: center;
+                margin-top: 2vw;
+                height: 150px;
+            }
+
+            h3 {
+                color: black;
+                font-size: 28px;
+                font-family: Roboto;
+                font-weight: 400;
+                word-wrap: break-word;
+                text-align: center;
+            }
+
+            #techniques {
+                margin-top: 2vw;
+                color: black;
+                font-size: 24px;
+                font-family: Roboto;
+                font-style: italic;
+                font-weight: 300;
+                word-wrap: break-word;
+            }
+
+            .view_more {
+                position: absolute;
+                bottom: 50;
+                right: 50;
+
+                svg {
+                    transition: all 0.3s ease-in-out;
+
+                    &:hover {
+                        transform: rotateZ(90deg);
+                    transition: all 0.3s ease-in-out;
+                    }
+                }
+
+            }
+
+
+        }
     }
 }

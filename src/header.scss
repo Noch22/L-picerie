@@ -1,33 +1,21 @@
-@font-face {
-    font-family: 'Dosis';
-    src: url('./fonts/dosis.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 #custom-header-bar {
     background-color: #f2f2f2;
     padding: 10px;
     text-align: center;
 }
 
-header {
-    .menu {
+
+.header-homepage {
+    padding-top: 1vw;
     display: flex;
     flex-direction: row;
-}
-}
+    justify-content: space-around;
+    background-color: transparent !important;
+    color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
 
-.custom-logo {
-    width: 10vw;
-}
-
-.header {
-    margin-top: 2vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
     ul {
         display: flex;
         flex-direction: row;
@@ -72,16 +60,17 @@ header {
 
 
 .vertical_bar {
-    position: absolute;
+    position: fixed;
     top: 0;
     display: block;
     width: 3vw;
     height: 100%;
     background-color: black;
+    z-index: 9;
 
     h2 {
         font-weight: bold;
-        font-size: 64px;
+        font-size: 60px;
         font-family: 'Dosis';
         text-transform: uppercase;
         position: absolute;
@@ -91,8 +80,24 @@ header {
         text-orientation: mixed;
         margin: 0;
         padding: 0;
-        top: 100px;
+        top: 50px;
         right: 0;
-        left: -25px;
+        left: -18px;
+        letter-spacing: 12px;
+    }
+}
+
+.menu-menu-principal-container {
+    ul {
+        list-style-type: none;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+         li {
+            a {
+                text-decoration: none;
+                color: var(--white);
+                font-size: 18px;
+            }
+         }
     }
 }
