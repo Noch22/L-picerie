@@ -63,14 +63,14 @@
     position: fixed;
     top: 0;
     display: block;
-    width: 3vw;
+    width: 4vw;
     height: 100%;
     background-color: black;
     z-index: 9;
 
     h2 {
         font-weight: bold;
-        font-size: 60px;
+        font-size: 48px;
         font-family: 'Dosis';
         text-transform: uppercase;
         position: absolute;
@@ -82,7 +82,7 @@
         padding: 0;
         top: 50px;
         right: 0;
-        left: -18px;
+        left: -13px;
         letter-spacing: 12px;
     }
 }
