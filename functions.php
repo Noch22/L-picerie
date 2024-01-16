@@ -27,6 +27,7 @@ function load_scripts_and_style()
   // ADD IMAGE SIZE
   add_image_size('expo-thumbnail', 630, 670, ['center', 'center']);
   add_image_size('cover-banner', 1920, 1080, ['center', 'center']);
+  add_image_size('slider-image', 500, 281, ['center', 'center']);
 
 
 // ADD MENU 
@@ -45,4 +46,17 @@ add_theme_support( 'custom-logo', [
   'flex-height' => true,
 	'flex-width' => true,
   ]);
+
+
+  function p($args){
+    echo '<pre>';
+    var_dump($args);
+    echo '</pre>';
+  }
+  
+  
+  function d($args){
+    p($args);
+    die();
+  }
   

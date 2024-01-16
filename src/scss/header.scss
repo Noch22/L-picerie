@@ -6,15 +6,39 @@
 
 
 .header-homepage {
-    padding-top: 1vw;
+    padding: 1vw 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     background-color: transparent !important;
-    color: white;
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 10;
+    transition: all 0.3s ease-in-out;
+
+    &>a>svg {
+        fill: var(--white);
+        display: flex;
+        align-items: center;
+    }
+
+    &.scrolled {
+        transition: all 0.3s ease-in-out;
+        background-color: var(--white) !important;
+
+        &>a>svg {
+            fill: var(--black);
+        }
+
+        .menu-menu-principal-container {
+                    a {
+                        transition: all 0.3s ease-in-out;
+                        color: var(--black);
+                        font-size: 18px;
+                    }
+                 }
+            }
 
     ul {
         display: flex;
@@ -27,6 +51,8 @@
     li {
         margin: 0 1vw;
     }
+
+
 }
 
 .menu-menu-principal-container {
@@ -63,7 +89,7 @@
     position: fixed;
     top: 0;
     display: block;
-    width: 4vw;
+    width: 60px;
     height: 100%;
     background-color: black;
     z-index: 9;

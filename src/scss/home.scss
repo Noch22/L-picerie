@@ -80,9 +80,6 @@ main {
         display: flex;
         flex-direction: row;
         background-color: var(--white);
-        width: 1280px;
-        margin-left: auto;
-        margin-right: auto;
         border-radius: 15px;
         position: relative;
         .cover_expo {
@@ -267,6 +264,16 @@ main {
                 
             }
 
+            .infos {
+                margin-left: 20px;
+            }
+
+        }
+
+        .close button {
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 
@@ -306,11 +313,10 @@ main {
 
 
   .rdv {
-
+    background-color: var(--white);
+    padding: 1vw 0 2vw 0;
     .element {
-        width: 1280px;
         display: grid;
-        margin: 0 auto;
         grid-template-columns: 20% 50% 20% 10%;
         grid-template-rows: 100%;
         align-items: center;
@@ -318,10 +324,6 @@ main {
         text-align: center;
         padding: 1vw 0;
         
-    }
-
-    .border {
-        border-bottom: 1px solid black;
     }
 
         .type {
@@ -361,13 +363,14 @@ main {
         }
 
         .description {
-            width: 1280px;
-            margin: 0 auto;
-            display: none;
             height: 3vw;
-            border-bottom: 1px solid black;
-            transition: all 0.3s ease-in-out;
-            opacity: 0;
+       
+            color: black;
+            font-size: 20px;
+            font-family: Roboto;
+            font-weight: 300;
+            line-height: 28px;
+            word-wrap: break-word;
         }
 
         .description.active {
@@ -376,4 +379,79 @@ main {
             opacity: 1;
         }
 
+        .show_btn {
+            border: none;
+            text-decoration: none;
+            background-color: transparent;
+
+            svg {
+                transition: all 0.3s ease-in-out;
+            }
+            
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+
+        .rotate svg{
+            transform: rotateZ(45deg);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button {
+            display: flex;
+            justify-content: flex-end;
+
+            a {
+                text-decoration: none;
+                font-family: 'Swomun', serif;
+                color: var(--white);
+                background-color: var(--black);
+                padding: 1vw 2vw;
+                margin-top: 2vw;
+                border-radius: 25px;
+                transition: all 0.3s ease-in-out;
+                svg {
+                    fill: var(--white);
+                    transition: all 0.3s ease-in-out;
+                    margin-left: 0.3vw;
+                }
+
+                &:hover {
+                    color: var(--black);
+                    background-color: var(--white);
+                    transition: all 0.3s ease-in-out;
+                    box-shadow: 5px 5px 15px 5px #D1D1D1;
+
+                    svg {
+                        fill: var(--black);
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .grid {
+            display: grid; /* 1 */
+            grid-template-rows: 0fr; /* 2 */
+            transition: grid-template-rows 0.5s ease-in-out; /* 3 */
+            border-bottom: 1px solid black;
+
+          }
+          
+          .grid.open {
+            grid-template-rows: 1fr; /* 5 */
+          }
+          
+          .grid-inner {
+            overflow: hidden; /* 4 */
+          }
+
+  }
+
+  .wrapper {
+    width: 1280px;
+    margin: 0 auto;
+    max-width: 100%;
   }

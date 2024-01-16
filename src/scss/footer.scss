@@ -1,0 +1,60 @@
+footer {
+    width: 100%;
+    height: 15vw;
+    background-color: var(--background-white);
+
+
+    .parent_footer {
+        display: flex;
+        flex-direction: row;
+        width: 1280px;
+        margin: 0 auto;
+        position: relative;
+
+        .insta_footer {
+            position: absolute;
+            top: 100;
+            left: 400;
+            background-color: var(--black);
+            padding: 3vh;
+            border-radius: 50%;
+        }
+
+        .facebook_footer {
+            position: absolute;
+            top: 50;
+            right: 400;
+            height: 5vh;
+            width: 5vh;
+            background-color: var(--black);
+            padding: 4vh;
+            border-radius: 25%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+
+        .text_footer {
+            font-family: 'Swomun', serif;
+
+            #saison {
+                position: absolute;
+                top: 50;
+                left: 550;
+                color: var(--grey);
+                font-size: 60px;
+                font-weight: 400;
+            }
+
+            #year {
+                position: absolute;
+                top: 120;
+                left: 550;
+                color: var(--grey);
+                font-size: 60px;
+                font-weight: 400;
+                transform: rotateZ(9deg);
+            }
+        }
+    }
+}

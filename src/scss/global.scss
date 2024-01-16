@@ -64,3 +64,20 @@ main {
     margin-left: auto;
     margin-right: auto;
 }
+
+.layout_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.layout_text {
+    color: black;
+    font-size: 20px;
+    font-family: Roboto;
+    font-weight: 300;
+    line-height: 30px;
+    word-wrap: break-word;
+    margin-left: 30px;
+}
