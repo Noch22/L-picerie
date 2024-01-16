@@ -189,8 +189,11 @@ main {
                     transition: all 0.3s ease-in-out;
 
                     &:hover {
-                        transform: rotateZ(90deg);
+                    
+                    transform: rotateZ(90deg);
                     transition: all 0.3s ease-in-out;
+                    cursor: pointer;
+                    
                     }
                 }
 
@@ -292,10 +295,7 @@ main {
         padding: 0 2vw;
         letter-spacing: 1px;
         animation: marquee 5s linear infinite;
-    }
-
-    &:hover {
-        animation-play-state: paused;
+        
     }
 
 }
@@ -306,19 +306,23 @@ main {
 
 
   .rdv {
-    width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    margin-top: 3vw;
 
-    .event {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        justify-content: space-around;
+    .element {
+        width: 1280px;
+        display: grid;
+        margin: 0 auto;
+        grid-template-columns: 20% 50% 20% 10%;
+        grid-template-rows: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 1vw 0;
+        
+    }
 
+    .border {
+        border-bottom: 1px solid black;
+    }
 
         .type {
             display: flex;
@@ -329,26 +333,24 @@ main {
             font-family: Roboto;
             font-weight: 300;
             word-wrap: break-word;
-
+            position: relative;
+            left: 0;
             p {
                 margin-left: 1vw;
             }
         }
 
         .name {
-            display: flex;
-            align-items: center;
             justify-items: center;
             color: black;
             font-size: 24px;
             font-family: Roboto;
             font-weight: 400;
             word-wrap: break-word;
+            text-align: left;
         }
 
         .date {
-            display: flex;
-            align-items: center;
             justify-items: center;
             color: black;
             font-size: 24px;
@@ -357,5 +359,21 @@ main {
             word-wrap: break-word;
 
         }
-    }
+
+        .description {
+            width: 1280px;
+            margin: 0 auto;
+            display: none;
+            height: 3vw;
+            border-bottom: 1px solid black;
+            transition: all 0.3s ease-in-out;
+            opacity: 0;
+        }
+
+        .description.active {
+            display: block;
+            transition: all 0.3s ease-in-out;
+            opacity: 1;
+        }
+
   }
