@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var menu = document.querySelector(".header-homepage");
+    if(document.querySelector('.header-homepage.homepage') !== null){
+    var menu = document.getElementsByClassName("header-homepage homepage");
+    var menu = document.querySelector(".header-homepage.homepage");
   
     window.addEventListener("scroll", function() {
       if (window.scrollY > 50) { // Vous pouvez ajuster cette valeur selon vos besoins
@@ -8,4 +10,4 @@ document.addEventListener("DOMContentLoaded", function() {
         menu.classList.remove("scrolled");
       }
     });
-  });
+  }});

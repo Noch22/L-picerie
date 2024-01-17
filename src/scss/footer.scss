@@ -1,8 +1,10 @@
 footer {
     width: 100%;
-    height: 15vw;
+    height: 250px;
     background-color: var(--background-white);
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .parent_footer {
         display: flex;
@@ -10,46 +12,43 @@ footer {
         width: 1280px;
         margin: 0 auto;
         position: relative;
+        justify-content: center;
+        align-items: center;
 
         .insta_footer {
-            position: absolute;
-            top: 100;
-            left: 400;
+            display: flex;
             background-color: var(--black);
-            padding: 3vh;
+            padding: 20px;
             border-radius: 50%;
+            transform: translateX(-50%) rotateZ(259deg);
+            
         }
 
         .facebook_footer {
-            position: absolute;
-            top: 50;
-            right: 400;
             height: 5vh;
             width: 5vh;
             background-color: var(--black);
-            padding: 4vh;
+            padding: 25px;
             border-radius: 25%;
             justify-content: center;
             align-items: center;
             display: flex;
+            transform: translateX(50%) rotateZ(15deg);
         }
 
         .text_footer {
             font-family: 'Swomun', serif;
+            position: relative;
+            display: flex;
+            flex-direction: column;
 
             #saison {
-                position: absolute;
-                top: 50;
-                left: 550;
                 color: var(--grey);
                 font-size: 60px;
                 font-weight: 400;
             }
 
             #year {
-                position: absolute;
-                top: 120;
-                left: 550;
                 color: var(--grey);
                 font-size: 60px;
                 font-weight: 400;

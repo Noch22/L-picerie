@@ -1,5 +1,4 @@
 .top {
-
     background-color: var(--background-white);
     position: static;
     h1 {
@@ -14,8 +13,9 @@
 
     #year {
         position: absolute;
-        left: 715;
-        top: 125;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 220px;
         padding: 10px;
         border-radius: 5px;
         border: 1px solid #D9D9D9;

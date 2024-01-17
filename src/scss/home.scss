@@ -6,6 +6,10 @@ body.sidebar-active {
     overflow: hidden;
 }
 
+body:not(.home){
+    padding-top: 80px;
+}
+
 
 .home_div {
 
@@ -57,7 +61,7 @@ body.sidebar-active {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     display: flex;
     z-index: 0;
 
@@ -179,8 +183,8 @@ main {
 
             .view_more {
                 position: absolute;
-                bottom: 50;
-                right: 50;
+                bottom: 20px;
+                right: 20px;
 
                 svg {
                     transition: all 0.3s ease-in-out;
@@ -196,11 +200,16 @@ main {
 
             }
 
+            .show_slider {
+                border: none;
+                background: transparent;
+            }
+
 
         }
     }
 
-    #sidebar {
+    .sidebar {
         position: fixed;
         display: block;
         -webkit-transform: translateZ(0);
@@ -212,8 +221,6 @@ main {
         z-index: 99;
         transform: translateX(110%);
         transition: all 0.3s ease-in-out;
-        -webkit-box-shadow: 5px 5px 15px 5px #7D7D7D; 
-        box-shadow: 5px 5px 15px 5px var(--marquee-background);  
         overflow-y: scroll;
 
         a {
@@ -277,9 +284,10 @@ main {
         }
     }
 
-    #sidebar.active {
+    .sidebar.active {
         transform: translateX(0%);
         transition: all 0.3s ease-in-out;
+        box-shadow:0 0 0 10000px rgba(0,0,0,.50);
     }
 
 }

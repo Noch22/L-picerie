@@ -60,3 +60,4 @@ add_theme_support( 'custom-logo', [
     die();
   }
   
+  add_theme_support( 'title-tag' );

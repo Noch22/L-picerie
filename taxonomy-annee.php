@@ -1,14 +1,19 @@
 <?php
 /* Template Name: Évènements */
 get_header();
-$actual_year = intval(get_term(get_field('annee_en_cours', 'options'))->name);
+$taxonomy = get_queried_object();
+$actual_year = intval($taxonomy->name);
 $next_year = intval($actual_year) + 1;
+$term_id = $taxonomy->term_id;
 $year = $actual_year . '-' . $next_year;
+$actual_year_link = get_term_link($term_id);
 
 $annees = get_terms( array(
     'taxonomy'   => 'annee',
     'hide_empty' => false,
+    'exclude' => array($term_id),
 ) );
+
 
 
 $expositions = get_posts([
@@ -31,6 +36,7 @@ $expositions = get_posts([
         <?php
     endforeach;
     ?>
+    <option value="<?= $actual_year_link ?>" selected><?=$year?></option>
     </select>
 </div>
 
@@ -107,6 +113,7 @@ $sidebar_class = 'sidebar-' . $i;
             </div>
                 <div class="expo_content">
                     <?php
+                    if(is_array($flexible_contents) || is_object($flexible_contents)){
                         foreach ($flexible_contents as $content) {
                             
                             $template_name = $content['acf_fc_layout'];
@@ -118,6 +125,9 @@ $sidebar_class = 'sidebar-' . $i;
                                 printf('</section>');
                             }
                      }
+                    } else {
+                        echo '<p class="layout_text">Aucun contenu </p>';
+                    }
                     ?>
                 </div>
 </main>
