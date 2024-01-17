@@ -28,6 +28,7 @@ function load_scripts_and_style()
   add_image_size('expo-thumbnail', 630, 670, ['center', 'center']);
   add_image_size('cover-banner', 1920, 1080, ['center', 'center']);
   add_image_size('slider-image', 500, 281, ['center', 'center']);
+  add_image_size('gallery-img', 387, 387, ['center', 'center']);
 
 
 // ADD MENU 

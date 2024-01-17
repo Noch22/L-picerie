@@ -1,3 +1,5 @@
+console.log('ShowCard loaded');
+
 function showcard(eventIndex) {
     var descriptionClass = 'description-' + eventIndex;
     var card = document.querySelector('.' + descriptionClass);
@@ -7,6 +9,7 @@ function showcard(eventIndex) {
 
 document.querySelectorAll('button.show_btn').forEach((buttonElement) => {
     const id = buttonElement.dataset.id;
+    console.log(buttonElement);
     buttonElement.addEventListener('click', () => {
         showcard(id);
         buttonElement.classList.toggle('rotate');

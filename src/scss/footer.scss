@@ -57,3 +57,23 @@ footer {
         }
     }
 }
+
+.rdv_footer {
+    background-color: var(--back-rdv) !important;
+
+    .insta_footer {
+        background-color: var(--white) !important;
+
+        path {
+            fill: var(--black) !important;
+        }
+    }
+
+    .facebook_footer {
+        background-color: var(--white) !important;
+
+        path {
+            fill: var(--black) !important;
+        }
+    }
+}

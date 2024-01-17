@@ -5,7 +5,7 @@ $actual_year = intval(get_term(get_field('annee_en_cours', 'options'))->name);
 $next_year = intval($actual_year) + 1;
 $year = str_split($actual_year)['2'] . str_split($actual_year)['3'] . '-' . str_split($next_year)['2'] . str_split($next_year)['3'];
 ?>
-<footer>
+<footer <?php echo $pagename == 'rendez-vous' ? 'class="rdv_footer"' : ' '?>>
     <div class="parent_footer">
 
         <a href="<?= $instagram ?>" target="_blank">
