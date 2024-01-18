@@ -181,115 +181,115 @@ main {
                 word-wrap: break-word;
             }
 
-            .view_more {
-                position: absolute;
-                bottom: 20px;
-                right: 20px;
-
-                svg {
-                    transition: all 0.3s ease-in-out;
-
-                    &:hover {
-                    
-                    transform: rotateZ(90deg);
-                    transition: all 0.3s ease-in-out;
-                    cursor: pointer;
-                    
-                    }
-                }
-
-            }
-
-            .show_slider {
-                border: none;
-                background: transparent;
-            }
-
 
         }
     }
 
-    .sidebar {
+}
+
+.view_more {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+
+    svg {
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+        
+        transform: rotateZ(90deg);
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+        
+        }
+    }
+
+}
+
+.show_slider {
+    border: none;
+    background: transparent;
+}
+
+.sidebar, .sidebar-artists {
+    position: fixed;
+    display: block;
+    -webkit-transform: translateZ(0);
+    bottom: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-color: var(--background-white);
+    z-index: 99;
+    transform: translateX(110%);
+    transition: all 0.3s ease-in-out;
+    overflow-y: scroll;
+
+    a {
         position: fixed;
-        display: block;
-        -webkit-transform: translateZ(0);
-        bottom: 0;
-        right: 0;
-        width: 40%;
-        height: 100%;
-        background-color: var(--background-white);
-        z-index: 99;
-        transform: translateX(110%);
-        transition: all 0.3s ease-in-out;
-        overflow-y: scroll;
-
-        a {
-            position: fixed;
-        }
-
-        svg {
-            transform: rotateZ(45deg);
-        }
-
-        .content {
-            h2 {
-                color: black;
-                font-size: 36px;
-                font-family: Roboto;
-                font-weight: 900;
-                word-wrap: break-word;
-                margin-top: 5vw;
-            }
-
-            h3 {
-                color: black;
-                font-size: 28px;
-                font-family: Roboto;
-                font-weight: 400;
-                word-wrap: break-word;
-                margin-top: 2vw;
-            }
-
-            #slidetech {
-                color: black;
-                font-size: 24px;
-                font-family: Roboto;
-                font-style: italic;
-                font-weight: 300;
-                word-wrap: break-word;
-                margin-top: 1vw;
-            }
-
-            .expo_content {
-                margin-top: 4vw;
-                font-family: 'Roboto', sans-serif;
-
-                p{
-                font-family: 'Roboto', sans-serif;
-                }
-                
-                
-            }
-
-            .infos {
-                margin-left: 20px;
-            }
-
-        }
-
-        .close button {
-            &:hover {
-                cursor: pointer;
-            }
-        }
     }
 
-    .sidebar.active {
-        transform: translateX(0%);
-        transition: all 0.3s ease-in-out;
-        box-shadow:0 0 0 10000px rgba(0,0,0,.50);
+    svg {
+        transform: rotateZ(45deg);
     }
 
+    .content {
+        h2 {
+            color: black;
+            font-size: 36px;
+            font-family: Roboto;
+            font-weight: 900;
+            word-wrap: break-word;
+            margin-top: 5vw;
+        }
+
+        h3 {
+            color: black;
+            font-size: 28px;
+            font-family: Roboto;
+            font-weight: 400;
+            word-wrap: break-word;
+            margin-top: 2vw;
+        }
+
+        #slidetech {
+            color: black;
+            font-size: 24px;
+            font-family: Roboto;
+            font-style: italic;
+            font-weight: 300;
+            word-wrap: break-word;
+            margin-top: 1vw;
+        }
+
+        .expo_content {
+            margin-top: 4vw;
+            font-family: 'Roboto', sans-serif;
+
+            p{
+            font-family: 'Roboto', sans-serif;
+            }
+            
+            
+        }
+
+        .infos {
+            margin-left: 20px;
+        }
+
+    }
+
+    .close button {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.sidebar.active, .sidebar-artists.active {
+    transform: translateX(0%);
+    transition: all 0.3s ease-in-out;
+    box-shadow:0 0 0 10000px rgba(0,0,0,.50);
 }
 
 .marquee {

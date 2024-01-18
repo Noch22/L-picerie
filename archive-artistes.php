@@ -1,78 +1,37 @@
 <?php
-/* Template Name: Évènements */
 get_header();
-$actual_year = intval(get_term(get_field('annee_en_cours', 'options'))->name);
-$next_year = intval($actual_year) + 1;
-$year = $actual_year . '-' . $next_year;
 
-$annees = get_terms( array(
-    'taxonomy'   => 'annee',
-    'hide_empty' => false,
-) );
+$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
+$args = array(
+    'post_type'      => 'artistes',
+    'numberposts'    => 9,
+    'paged'          => $paged,
+);
 
-$expositions = get_posts([
-    'post_type' => 'exposition',
-    'annee' => $actual_year
+$custom_query = new WP_Query( $args );
 
-]);
 ?>
-<div class="top">
-    <h1><?= $year ?></h1>
-    <select name="annee" id="year">
-        <?php foreach($annees as $annee) : 
-            $year_name = $annee->name;
-            $year_id = $annee->term_id;
-            $next_year_drop = intval($year_name) + 1;
-            $plage_year = $year_name . '-' . $next_year_drop;
-            $year_link = get_term_link($year_id);
-        ?>  
-        <option value="<?= $year_link ?>"><?=$plage_year?></option>
-        <?php
-    endforeach;
+
+<div class="parent">
+    <?php
+    $i=0;
+    while ( $custom_query->have_posts() ) : $custom_query->the_post();
+        $nom     = get_field('nom_de_lartiste');
+        $type    = get_field('type_dartiste');
+        $image   = get_field('image_de_lartiste');
+        $content = get_field('description');
+        $flexible_contents = get_field('description');
+        $i++;
+        $sidebar_class = 'sidebar-' . $i;
     ?>
-    </select>
-</div>
-
-<div class="expos">
-<?php
-$i = 0;
-foreach($expositions as $expo) :
-$idpost = $expo->ID;
-$expo_name = get_field('expo_name', $idpost);
-$image = get_field('image_de_lexposition', $idpost);
-$artistes = get_field('artiste', $idpost);
-$techniques = get_field('techniques', $idpost);
-$start_date = get_field('date_de_debut', $idpost);
-$end_date = get_field('date_de_fin', $idpost);
-$additional_txt = get_field('texte_additionnel', $idpost);
-$link = get_permalink($expo);
-$flexible_contents = get_field('content', $idpost);
-$i++;
-$sidebar_class = 'sidebar-' . $i;
-
-?>
-<main>
-    <div class="last_expo wrapper">
-        <div class="cover_expo">
-            <img src="<?php echo esc_url($image['sizes']['expo-thumbnail']); ?>" alt="<?php echo $image['alt']; ?>" height="<?php echo $image['sizes']['expo-thumbnail-height']; ?>" width="<?php echo $image['sizes']['expo-thumbnail-width']; ?>" loading="lazy">
+    <div class="child_artiste" data-id="<?= $i ?>">
+        <img src="<?= $image['sizes']['artists-img'] ?>" alt="<?= $image['alt'] ?>" height="<?= $image['sizes']['artists-img-height'] ?>" width="<?= $image['sizes']['artists-img-width'] ?>">
+        <div class="text_artists">
+            <h3><?= $nom ?></h3>
+            <p><?= $type ?></p>
         </div>
-             <div class="text_expo">
-                <p id="badge">Exposition</p>
-                    <div class="dates">
-                        <p><?= $start_date ?></p>
-                        <div class="arrow">
-                            <svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12.9797 11.9085L16.7381 6.7761H0.930664V5.28514H16.7381L12.9797 0.15271L24.9665 6.03062L12.9797 11.9085Z" fill="black"/>
-                            </svg>
-                        </div>
-                    <p><?= $end_date ?></p>
-                    </div>
-                <p id="additional_txt"><?= $additional_txt ?></p>
-                <h2><?= $expo_name ?></h2>
-                <h3><?= $artistes ?></h3>
-                <h3 id="techniques"><?= $techniques ?></h3>
-                <div class="view_more">
+        <div class="view_more">
                     <button class="show_slider" data-id="<?= $i ?>">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <mask id="mask0_382_230" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
@@ -84,9 +43,7 @@ $sidebar_class = 'sidebar-' . $i;
                         </svg>
                     </button>
                 </div>
-            </div>
-        </div>
-        <div class="sidebar <?= $sidebar_class ?>" data-id="<?= $i ?>">
+        <div class="sidebar-artists <?= $sidebar_class ?>" data-id="<?= $i ?>">
             <div class="close">
             <button class="show_slider" data-id="<?= $i ?>">
                         <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -101,9 +58,8 @@ $sidebar_class = 'sidebar-' . $i;
             </div>
             <div class="content">
                 <div class="infos">
-                <h2><?= $expo_name ?></h2>
-                <h3><?= $artistes ?></h3>
-                <h3 id="slidetech"><?= $techniques ?></h3>
+                <h2><?= $nom ?></h2>
+                <h3 id="slidetech"><?=$type?></h3>
             </div>
                 <div class="expo_content">
                     <?php
@@ -121,14 +77,66 @@ $sidebar_class = 'sidebar-' . $i;
                     ?>
                 </div>
             </div>
-</main>
+        </div>
+
+    </div>
+    <?php
+    endwhile;
+    ?>
+</div>
 <?php
-endforeach;
+
+    // Affichez la pagination
+    echo '<div class="pagination">';
+    echo paginate_links(array(
+        'total'    => $custom_query->max_num_pages,
+        'current'  => max( 1, get_query_var( 'paged' ) ),
+        'prev_text' => '<',
+        'next_text' => '>',
+    ));
+    echo '</div>';
+
+    // Réinitialisez les données de la requête personnalisée
+    wp_reset_postdata();
+
+    ?>
+
+<?php
+get_footer();
 ?>
 
-</div>
-
 <?php
+// $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-    get_footer();
+// $args = array(
+//     'post_type'      => 'artiste',
+//     'posts_per_page' => 9, // Nombre de publications par page
+//     'paged'          => $paged,
+// );
+
+// $custom_query = new WP_Query( $args );
+
+// if ( $custom_query->have_posts() ) :
+//     while ( $custom_query->have_posts() ) : $custom_query->the_post();
+//         $the_post = $custom_query->posts;
+//         p($the_post);
+//     endwhile;
+
+//     // Affichez la pagination
+//     echo '<div class="pagination">';
+//     echo paginate_links( array(
+//         'total'    => $custom_query->max_num_pages,
+//         'current'  => max( 1, get_query_var( 'paged' ) ),
+//         'prev_text' => '&laquo;',
+//         'next_text' => '&raquo;',
+//     ) );
+//     echo '</div>';
+
+//     // Réinitialisez les données de la requête personnalisée
+//     wp_reset_postdata();
+
+// else :
+//     // Aucune publication trouvée
+//     echo '<p>Aucune publication trouvée</p>';
+// endif;
 ?>

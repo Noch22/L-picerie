@@ -23,16 +23,18 @@
 <div class="vertical_bar">
     <h2><?php
    $queried_object = get_queried_object();
-   $this_tax = get_taxonomy($queried_object->taxonomy);
+   if(isset($queried_object->taxonomy)){
+    $taxonomy = $queried_object->taxonomy;
+    $this_tax = get_taxonomy($taxonomy);
     if(isset($this_tax->name)){
         $annee = $this_tax->name;
-    }
+    }}
     if(is_front_page()) {
         echo 'Bienvenue !';
     } else if(isset($annee) && $annee == 'annee' ) {
         echo 'Expositions';
     }else {
-        the_title();
+       wp_title('');
     }
     ?>
 </h2>

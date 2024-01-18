@@ -1,0 +1,92 @@
+.parent {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 427px);
+    grid-template-rows: repeat(auto-fill, 596px);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    width: 1290px;
+    margin: 0 auto;
+
+
+    .child_artiste {
+        width: 427px;
+        height: 596px;
+        background-color: black;
+        position: relative;
+
+        .show_slider {
+            path{
+                fill: var(--white);
+            }
+        }
+
+        .close {
+            .show_slider {
+                path{
+                    fill: black;
+                }
+            }
+        }
+
+        .text_artists {
+
+            h3 {
+                color: var(--white);
+                font-size: 30px;
+                font-family: Roboto;
+                font-weight: 800;
+                word-wrap: break-word;
+                margin: 20px 0 0 20px;
+            }
+    
+            p{
+                color: white;
+                font-size: 16px;
+                font-family: Roboto;
+                font-weight: 400;
+                word-wrap: break-word;
+                margin: 20px 0 0 20px;
+            }
+
+        }
+
+    }
+    }
+
+    .pagination {
+        width: 1280px;
+        margin: 10px auto;
+        display: flex;
+        justify-content: center;
+
+        .page-numbers {
+            display: flex;
+            color: var(--white);
+            font-size: 20px;
+            font-family: 'Swomun', serif;
+            font-weight: 400;
+            word-wrap: break-word;
+            text-decoration: none;
+            width: 34px;
+            height: 34px;
+            padding: 10px;
+            background-color: black;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            margin: 0 5px;
+        }
+
+        .current {
+            color: black;
+            background-color: var(--white);
+            box-shadow: -7px 10px 15px 5px rgba(0,0,0,0.41);
+        }
+
+        .next, .prev {
+            background-color: transparent;
+            color: black;
+            font-size: 60px;
+            font-family: 'Roboto';
+        }
+    }
