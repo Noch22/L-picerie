@@ -30,6 +30,8 @@ function load_scripts_and_style()
   add_image_size('slider-image', 500, 281, ['center', 'center']);
   add_image_size('gallery-img', 387, 387, ['center', 'center']);
   add_image_size('artists-img', 427, 455, ['center', 'center']);
+  add_image_size('banner-about', 884, 497, ['center', 'center']);
+  add_image_size('sponsor-logo', 228, 228, ['center', 'center']);
 
 // ADD MENU 
 function custom_register_nav_menu(){

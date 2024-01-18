@@ -44,6 +44,7 @@ body:not(.home){
         font-weight: 900;
         font-size: 68px;
         color: var(--white);
+        width: 525px
     }
 
     p {
@@ -211,7 +212,7 @@ main {
     background: transparent;
 }
 
-.sidebar, .sidebar-artists {
+.sidebar, .sidebar-artists, .sidebar-header {
     position: fixed;
     display: block;
     -webkit-transform: translateZ(0);
@@ -286,7 +287,7 @@ main {
     }
 }
 
-.sidebar.active, .sidebar-artists.active {
+.sidebar.active, .sidebar-artists.active, .sidebar-header.active {
     transform: translateX(0%);
     transition: all 0.3s ease-in-out;
     box-shadow:0 0 0 10000px rgba(0,0,0,.50);

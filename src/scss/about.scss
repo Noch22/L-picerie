@@ -1,0 +1,44 @@
+.about {
+    width: 1280px;
+    margin: 0 auto;
+    margin-top: 50px;
+    h3 {
+        color: black;
+        font-size: 40px;
+        font-family: 'Swomun', serif;
+        font-weight: 400;
+        letter-spacing: 0.80px;
+        word-wrap: break-word;
+    }
+
+    p {
+        color: black;
+        font-size: 20px;
+        font-family: 'Roboto';
+        font-weight: 300;
+        line-height: 30px;
+        word-wrap: break-word;
+    }
+
+    .layout_title_text  {
+        margin-left: 100px;
+        margin-bottom: 50px;
+    }
+
+    .layout_image_about {
+        img {
+            border-radius: 15px;
+        }
+    }
+}
+
+.sponsors {
+    .logos {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+    }
+
+    .layout_sponsor {
+        width: 228px;
+    }
+}

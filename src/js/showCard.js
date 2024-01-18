@@ -109,3 +109,45 @@ if(document.querySelector('.sidebar-artists') !== null){
     
     console.log(document.querySelectorAll('.child_artiste'))
     }
+
+
+if(document.querySelector('.sidebar-header') !== null){
+        function showsliderArtists() {
+            var sidebarheader = document.querySelector('.sidebar-header');
+            sidebarheader.classList.toggle('active');
+            body.classList.toggle('sidebar-active');
+        }
+        
+        document.querySelector('.infos-pratiques').addEventListener('click', () => {
+                showsliderArtists();
+            })
+            
+        document.querySelector('.sidebar_header, .close, .show_slider').addEventListener('click', () => {
+                showsliderArtists();
+            })
+        
+        document.addEventListener('mousedown', function(event) {
+            var sidebars = document.querySelectorAll('.sidebar-header');
+            console.log(event);
+        
+            // Vérifier si le clic est à l'intérieur de l'un des sidebars et que le sidebar est actif
+            var isInsideSidebar = Array.from(sidebars).some(function(sidebar) {
+                return sidebar.contains(event.target) && sidebar.classList.contains('active');
+            });
+        
+            // Si le clic n'est pas à l'intérieur d'un sidebar actif, retirer la classe active
+            if (!isInsideSidebar) {
+                sidebars.forEach(function(sidebar) {
+                    if (sidebar.classList.contains('active')) {
+                        sidebar.classList.remove('active');
+                        body.classList.remove('sidebar-active');
+                    }
+                });
+            }
+        });
+        
+        // Empêcher la propagation du clic à l'intérieur du sidebar pour éviter la fermeture immédiate
+        document.querySelector('.sidebar-header').addEventListener('mousedown', function(event) {
+            event.stopPropagation();
+        });
+        }

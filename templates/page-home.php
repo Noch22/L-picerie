@@ -2,6 +2,7 @@
     /* Template Name: Accueil */
     get_header();
 
+    $title = get_field('page_title', 'options');
     $cover = get_field('image_de_fond', 'options');
     $desc = get_field('description_accueil', 'options');
     $expo_home = get_field('exposition_page_daccueil', 'options');
@@ -32,7 +33,7 @@
                 <img src="<?= get_site_url() . '/wp-content/uploads/2024/01/logo_home.png'?>" id="logo_cover" alt="Logo l'épicerie">
             </div>
             <div class="home_div_text">
-                <h1>Atelier Galerie <br>de l'épicerie</h1>
+                <h1><?= $title ?></h1>
                 <p><?= $desc ?></p>
             </div>
     </div>
