@@ -568,7 +568,19 @@ main {
 
                 #techniques {
                     font-size: 12px !important;
-                    padding-bottom: 48px;
+                    padding-bottom: 32px;
+                }
+
+
+                .view_more {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    bottom: 0;
+                    right: 0;
+                    margin-bottom: 16px;
                 }
             }
         }

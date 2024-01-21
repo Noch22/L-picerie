@@ -45,9 +45,27 @@
     }
 
     .expos {
-        margin-top: 80px;
+        margin: 80px 0;
     }
 
+
+    .sidebar {
+        width: 60%;
+
+        .content {
+
+            padding: 16px 24px;
+            .infos {
+                h2 {
+                    font-size: 24px;
+                }
+
+                h3, #slidetech {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
 
 
 
