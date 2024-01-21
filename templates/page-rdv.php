@@ -4,6 +4,7 @@ get_header();
 
 
 ?>
+<div class="wrap_center">
 <div class="rdv page-rdv">
     <?php
     
@@ -118,7 +119,7 @@ $image_8 = get_field('image_8', 'options');
         <h4>Si vous souhaitez participer aux rendez-vous de L’Épicerie, contactez-nous !</h3>
     </div>
 </div>
-
+</div>
 <?php
 
     get_footer();

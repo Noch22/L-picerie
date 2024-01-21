@@ -182,14 +182,12 @@
         }
         .grid_horaires {
             margin-top: 25px;
-            display: grid;
-            grid-template-columns: 90px 250px 160px;
-            grid-template-rows: repeat(auto-fit, 1fr);
-            grid-column-gap: 0px;
-            grid-row-gap: 0px;
+            display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding-bottom: 25px;
+            padding: 0 25px 25px;
+            gap: 10px;
 
             p{
                 color: white;
@@ -198,7 +196,19 @@
                 font-weight: 300;
                 line-height: 30px;
                 word-wrap: break-word;
-                margin-bottom: 10px;
+            }
+
+            .row {
+                display: flex;
+                flex-direction: row;
+                gap: 8px;
+                width: 100%;
+                align-items: baseline;
+
+                .bottom_line_horaires {
+                    flex-grow: 1;
+                    border-bottom: 1px dotted var(--white);
+                }
             }
 
         }
@@ -316,9 +326,6 @@
 .sidebar-header {
     background-color: var(--white) !important;
 
-    .content {
-        margin: 25px 25px;
-    }
 }
 
 .fermeture_text{
@@ -387,6 +394,12 @@
 
     .header-homepage {
         padding: 10px 10px;
+        width: 100vw;
+        position: fixed;
+        top: 0;
+        left: 0;
     }
+
+    
 
 }

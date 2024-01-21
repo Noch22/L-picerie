@@ -21,8 +21,11 @@
     }
 
     .layout_title_text  {
+        margin-top: 50px;
         margin-left: 100px;
         margin-bottom: 50px;
+        text-align: justify;
+        width: 1000px;
     }
 
     .layout_image_about {
@@ -36,6 +39,7 @@
     .logos {
         display: grid;
         grid-template-columns: repeat(4, auto);
+        justify-items: center;
     }
 
     .layout_sponsor {

@@ -64,3 +64,21 @@ add_theme_support( 'custom-logo', [
   }
   
   add_theme_support( 'title-tag' );
+
+  function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/src/img/logo_home.png);
+		        height: 80px;
+            width: 80px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+function my_login_logo_url() {
+  return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );

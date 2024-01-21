@@ -4,6 +4,7 @@
     $contenus = get_field('contenu_de_la_page', 'options');
     $sponsors = get_field('sponsors', 'options');
 ?>
+<div class="wrap_center">
 <div class="about">
     <?php
 foreach ($contenus as $content) {
@@ -65,7 +66,7 @@ foreach ($sponsors as $content) {
 </div>
 </div>
 
-
+</div>
 </div>
 
 <?php

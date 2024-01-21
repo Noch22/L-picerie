@@ -30,5 +30,7 @@ $year = str_split($actual_year)['2'] . str_split($actual_year)['3'] . '-' . str_
             </div>
         </a>
     </div>
-    <div class="footer_links"></div>
+    <div class="footer_links">
+        <a href="<?= get_site_url() . "/mentions-legales/" ?>">Mentions Légales</a>
+    </div>
 </footer>

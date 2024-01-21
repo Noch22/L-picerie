@@ -14,19 +14,13 @@
         background-color: black;
         position: relative;
 
-        .show_slider {
+        .show_slider.plus {
             path{
                 fill: var(--white);
             }
         }
 
-        .close {
-            .show_slider {
-                path{
-                    fill: black;
-                }
-            }
-        }
+
 
         .text_artists {
 
@@ -46,6 +40,7 @@
                 font-weight: 400;
                 word-wrap: break-word;
                 margin: 20px 0 0 20px;
+                width: 75%;
             }
 
         }

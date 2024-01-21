@@ -27,6 +27,7 @@
     $flexible_contents = get_field('content', $idpost);
     
 ?>
+<div class="wrap_center">
 <div class="cover_banner" style="background-image: url(<?php echo esc_url($cover['sizes']['cover-banner']); ?>);">
     <div class="home_div">
             <div class="logo_cover">
@@ -143,5 +144,5 @@
                 </a>
     </div>
 </div>
-
+</div>
 <?php get_footer(); ?>
