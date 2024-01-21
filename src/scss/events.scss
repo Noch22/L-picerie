@@ -28,3 +28,29 @@
         }
     
 }
+
+@media only screen and (max-width: 768px) { 
+    .top {
+        background-color: var(--white);
+        h1 {
+            font-size: 72px;
+        }
+
+        #year {
+            top: 65px;
+            background-color: var(--black);
+            color: var(--white);
+            border-right: 16px solid transparent
+        }
+    }
+
+    .expos {
+        margin-top: 80px;
+    }
+
+
+
+
+
+
+}

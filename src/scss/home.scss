@@ -482,11 +482,16 @@ main {
     transform: scaleY(0);
 }
 
+.mobile {
+    display: none !important;
+}
+
 @media only screen and (max-width: 768px) { 
 
     body {
         width: 100%;
         position: absolute;
+        background-color: var(--white);
     }
 
     .cover_banner {
@@ -575,10 +580,6 @@ main {
             position: absolute;
         }
 
-        .facebook_footer {
-            transform: translateX(2%) !important;
-        }
-
         .wrap_center {
             padding-left: 0;
         }
@@ -586,6 +587,7 @@ main {
         main {
             margin-top: 32px;
             .last_expo {
+                background-color: var(--background-white);
                 .cover_expo{
                     img {
                         width: 100%;
@@ -596,9 +598,121 @@ main {
         }
 
         .rdv {
+
+            margin-top: 17px;
             .element {
-                
+                display: none;
+            }
+            .mobile {
+                display: flex !important;
+                justify-content: space-around;
+                align-items: center;
+                .name {
+                    p {
+                        font-size: 12px;
+
+                        &:first-of-type {
+                            font-size: 15px;
+                        }
+                        
+                    }
+                }
+
+                .grid-inner {
+                    height: 0px;
+                    
+                    .description {
+                        font-size: 16px;
+                        height: 100%;
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                }
+                &.grid {
+                    display: grid !important;
+                    grid-template-rows: 0fr;
+                    transition: grid-template-rows 0.5s ease-in-out;
+                    border-bottom: 1px solid black;
+    
+                    &.open {
+                        grid-template-rows: 50px;
+                        transition: grid-template-rows 0.5s ease-in-out;
+
+                        .grid-inner {
+                            height: 50px;
+                        }
+                    }
+                }
+
+                & .show_btn {
+                    border: none;
+                    text-decoration: none;
+                    background-color: transparent;
+        
+                    svg {
+                        transition: all 0.3s ease-in-out;
+                        width: 30px;
+                    }
+                    
+        
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+            }
+
+            .type {
+                svg {
+                    width: 15px;
+                    height: 15px;
+                }
+            }
+
+            .date {
+                font-size: 12px;
+            }
+
+            .grid {
+                display: none;
+            }
+
+            .button {
+                margin: 20px -10px ;
+        }
+
+}
+
+    footer {
+        width: 100%;
+        margin: 0 auto;
+
+        .parent_footer {
+            width: 100% !important;
+
+
+            .insta_footer {
+                transform: translateX(-20%) rotateZ(355deg) !important;
+                padding: 15px !important;
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            .facebook_footer {
+                width: 70px !important;
+                height: 70px !important;
+                transform: translateX(40%) rotateZ(25deg) !important;
+                padding: 20px !important;
             }
         }
+
+        .footer_links {
+            width: 100% !important;
+        }
+    }
 
 }

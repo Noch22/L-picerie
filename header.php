@@ -39,11 +39,11 @@ $fermeture = get_field('fermeture_exceptionnelle', 'options');
     ?>
     <div class="mobile_btn">
         <button class="mobile_show">
-            <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <rect y="7" width="17" height="3" rx="1.5" fill="black"/>
-                <rect width="17" height="3" rx="1.5" fill="black"/>
-                <rect y="14" width="17" height="3" rx="1.5" fill="black"/>
-            </svg>
+        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect y="7" width="17" height="3" rx="1.5" fill="black"/>
+            <rect width="17" height="3" rx="1.5" fill="black"/>
+            <rect y="14" width="17" height="3" rx="1.5" fill="black"/>
+        </svg>
         </button>
     </div>
 </div>
@@ -68,6 +68,19 @@ $fermeture = get_field('fermeture_exceptionnelle', 'options');
 </h2>
 </div>
 <div class="menu_mobile">
+<div class="close_mobile">
+            <button class="close_menu_mobile">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0_348_1267" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+                            <rect width="40" height="40" fill="#D9D9D9"/>
+                            </mask>
+                            <g mask="url(#mask0_348_1267)">
+                            <circle cx="20" cy="20" r="16" fill="white"/>
+                            <path d="M13.9997 28.3333L19.9997 22.3333L25.9997 28.3333L28.333 26L22.333 20L28.333 14L25.9997 11.6667L19.9997 17.6667L13.9997 11.6667L11.6663 14L17.6663 20L11.6663 26L13.9997 28.3333ZM19.9997 36.6667C17.6941 36.6667 15.5275 36.2292 13.4997 35.3542C11.4719 34.4792 9.70801 33.2917 8.20801 31.7917C6.70801 30.2917 5.52051 28.5278 4.64551 26.5C3.77051 24.4722 3.33301 22.3056 3.33301 20C3.33301 17.6944 3.77051 15.5278 4.64551 13.5C5.52051 11.4722 6.70801 9.70833 8.20801 8.20833C9.70801 6.70833 11.4719 5.52083 13.4997 4.64583C15.5275 3.77083 17.6941 3.33333 19.9997 3.33333C22.3052 3.33333 24.4719 3.77083 26.4997 4.64583C28.5275 5.52083 30.2913 6.70833 31.7913 8.20833C33.2913 9.70833 34.4788 11.4722 35.3538 13.5C36.2288 15.5278 36.6663 17.6944 36.6663 20C36.6663 22.3056 36.2288 24.4722 35.3538 26.5C34.4788 28.5278 33.2913 30.2917 31.7913 31.7917C30.2913 33.2917 28.5275 34.4792 26.4997 35.3542C24.4719 36.2292 22.3052 36.6667 19.9997 36.6667Z" fill="black"/>
+                            </g>
+                    </svg>
+            </button>
+            </div>
 <?php 
     wp_nav_menu(['primary_menu']);
     ?>

@@ -381,11 +381,56 @@
     display: block;
     width: 40%;
     height: 100%;
-    background-color: black;
+    background-color: var(--white);
     z-index: 99;
     transform: translateX(110%);
     transition: all 0.3s ease-in-out;
     overflow-y: scroll;
+
+    &.open {
+        transform: translateX(0%);
+        transition: all 0.3s ease-in-out;
+        overflow: visible;
+        box-shadow: 0 0 0 10000px rgba(0,0,0,.50);
+    }
+
+    .menu-menu-principal-container {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: var(--black);
+
+        a {
+            color: var(--black);
+        }
+
+        ul {
+            li{
+                margin: 5px 0;
+            }
+        }
+    }
+
+    .close_mobile {
+        position: absolute;
+        left: -40px;
+        top: 20px;
+
+        button {
+            background-color: transparent;
+        }
+
+        circle {
+            fill: black;
+        }
+
+        path {
+            fill: white;
+        }
+    }
+
+
     }
 
     .mobile_btn {
@@ -393,13 +438,36 @@
     }
 
     .header-homepage {
-        padding: 10px 10px;
+        padding: 20px;
         width: 100vw;
         position: fixed;
         top: 0;
         left: 0;
+        background-color: var(--black) !important;
+
+        &.scrolled {
+
+            .mobile_show {
+                svg {
+                    rect {
+                        fill: var(--black);
+                    }
+                    
+                    }
+                }
+
+        }
     }
 
-    
+    .mobile_show {
+        background-color: transparent;
+
+        svg {
+            rect {
+                fill: var(--white);
+            }
+            
+        }
+    }
 
 }

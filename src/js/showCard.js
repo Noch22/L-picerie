@@ -7,12 +7,33 @@ function showcard(eventIndex) {
     card.classList.toggle('open');
 }
 
-document.querySelectorAll('button.show_btn').forEach((buttonElement) => {
+document.querySelectorAll('button.desktop.show_btn').forEach((buttonElement) => {
     const id = buttonElement.dataset.id;
     console.log(buttonElement);
     buttonElement.addEventListener('click', () => {
         showcard(id);
         buttonElement.classList.toggle('rotate');
+    })
+    
+}) 
+
+
+//MOBILE RDV CARD TOGGLE
+
+function showcardMobile(eventIndex) {
+    var descriptionClass = 'description-' + eventIndex;
+    var card = document.querySelector('.mobile.grid.wrapper' + '.' + descriptionClass);
+    //card.classList.toggle('active');
+    card.classList.toggle('open');
+    console.log(card);
+}
+
+document.querySelectorAll('button.mobile.show_btn').forEach((buttonElement) => {
+    const id = buttonElement.dataset.id;
+    buttonElement.addEventListener('click', () => {
+        showcardMobile(id);
+        buttonElement.classList.toggle('rotate');
+        console.log("button mobile clicked");
     })
     
 }) 
