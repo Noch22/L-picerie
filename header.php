@@ -8,6 +8,7 @@
 </head>
 <body <?php 
 $fermeture = get_field('fermeture_exceptionnelle', 'options');
+$ouverture_fermeture = get_field('fermetureouverture', 'options');
     echo $fermeture ? body_class( 'fermeture_exceptionnelle') : body_class(); 
 
 ?>>
@@ -175,11 +176,25 @@ foreach ($jours as $horaire) {
                                 <?php
                     }
                 }else {
+                    if($ouverture_fermeture){
+                        ?>
+                        <p>Ouverture exceptionnelle</p>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10.5" cy="10.5" r="10.5" fill="#002CDA"/>
+                            </svg>
+                        <?php
+
+                    }else if(!$ouverture_fermeture){
+                        ?>
+                        <p>Fermeture exceptionnelle</p>
+                            <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10.5" cy="10.5" r="10.5" fill="#eb5e34"/>
+                            </svg>
+                        <?php
+
+                    }
                     ?>
-                                    <p>Fermeture exceptionnelle</p>
-                                        <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <circle cx="10.5" cy="10.5" r="10.5" fill="#eb5e34"/>
-                                    </svg>
+                                    
                     <?php
                 }
                 ?>
@@ -238,7 +253,7 @@ foreach ($jours as $horaire) {
                         <b>ateliergalerie.epicerie@gmail.com</b>
                 </p>
                 </div>
-                <div class="contact">
+                <div class="contact" id="contact_tab">
                     <h3 id="contact">Contact</h3>
                     <?= do_shortcode('[contact-form-7 id="4cfd174" title="Formulaire de contact"]') ?>
                 </div>

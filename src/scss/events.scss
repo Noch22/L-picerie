@@ -25,11 +25,12 @@
         font-size: 20px;
         font-family: Roboto;
         font-weight: 400;
+        border-right: 16px solid transparent
         }
     
 }
 
-@media only screen and (max-width: 768px) { 
+@media screen and (max-width: 767px) { 
     .top {
         background-color: var(--white);
         h1 {

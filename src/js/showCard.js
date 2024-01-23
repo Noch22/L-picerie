@@ -146,6 +146,12 @@ if(document.querySelector('.sidebar-header') !== null){
         document.querySelector('.sidebar_header, .close, .show_slider').addEventListener('click', () => {
                 showsliderArtists();
             })
+            
+            if(document.querySelector('.toggle_sponsors') !== null){
+        document.querySelector('.toggle_sponsors').addEventListener('click', () => {
+                showsliderArtists();
+            })
+            }
         
         document.addEventListener('mousedown', function(event) {
             var sidebars = document.querySelectorAll('.sidebar-header');

@@ -486,7 +486,7 @@ main {
     display: none !important;
 }
 
-@media only screen and (max-width: 768px) { 
+@media all and (max-width: 767px) {
 
     body {
         width: 100%;

@@ -53,7 +53,11 @@ footer {
                 color: var(--grey);
                 font-size: 60px;
                 font-weight: 400;
-                transform: rotateZ(9deg);
+            }
+
+            #after_year {
+                margin: 15px 10px 0;
+                position: absolute;
             }
         }
     }

@@ -15,7 +15,12 @@ get_header();
     foreach ($events as $event):
         $event_name = get_field('nom_de_levenement', $event->ID);
         $event_desc = get_field('description_de_levenement', $event->ID);
-        $event_date = get_field('date_de_levenement', $event->ID);
+        if(get_field('date_de_levenement', $event->ID)) {
+            $event_date = get_field('date_de_levenement', $event->ID);
+        }else {
+            $event_date = "Date à définir";
+        }
+        
         $event_id = get_field('type_devenement', $event->ID);
         $event_taxo = get_term($event_id)->taxonomy;
         $event_type = get_term($event_id)->name;
