@@ -141,8 +141,13 @@ if(document.querySelector('.sidebar-header') !== null){
         
         document.querySelector('.infos-pratiques').addEventListener('click', () => {
                 showsliderArtists();
+                console.log('test');
             })
-            
+        
+            document.querySelector('.menu_mobile .infos-pratiques').addEventListener('click', () => {
+                window.location.href = '/infos-pratiques/'
+            })
+
         document.querySelector('.sidebar_header, .close, .show_slider').addEventListener('click', () => {
                 showsliderArtists();
             })

@@ -73,3 +73,50 @@
         width: 100%;
     }
 }
+
+@media screen and (max-width: 767px) { 
+    .about {
+        width: 90%;
+    }
+
+    .layout_image_about {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+            width: 396px;
+            height: 231px;
+        }
+    }
+
+    .layout_title_text {
+        width: 90% !important;
+        margin-left: 10px !important;
+    }
+
+    .logos {
+        grid-template-columns: repeat(2, 125px) !important;
+        gap: 20px !important;
+    }
+
+    .layout_sponsor {
+        width: 125px !important;
+        height: 114px !important;
+        img {
+            width: 125px;
+            height: 114px;
+        }
+    }
+
+    #join {
+        h4 {
+            font-size: 12px !important;
+            line-height: 1;
+        }
+        
+    }
+
+
+
+
+}

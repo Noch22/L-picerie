@@ -34,8 +34,8 @@
                 <img src="<?= get_site_url() . '/wp-content/uploads/2024/01/logo_home.png'?>" id="logo_cover" alt="Logo l'épicerie">
             </div>
             <div class="home_div_text">
-                <h1><?= $title ?></h1>
-                <p><?= $desc ?></p>
+                <h1 id="homepage_title"><?= $title ?></h1>
+                <p id="homepage_paragraph"><?= $desc ?></p>
             </div>
     </div>
 </div>

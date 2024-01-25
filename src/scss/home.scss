@@ -57,6 +57,7 @@ body:not(.home){
         color: var(--white);
         width: 525px;
         line-height: 1;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 
     p {
@@ -66,6 +67,7 @@ body:not(.home){
         font-size: 20px;
         width: 680px;
         margin-top: 32px;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
 }
 
@@ -486,7 +488,23 @@ main {
     display: none !important;
 }
 
-@media all and (max-width: 767px) {
+#homepage_title {
+    .word {
+    transform: translateY(150px) rotate(10deg);
+    transition: transform .7s;
+    opacity: 0;
+}
+}
+
+
+#homepage_paragraph{
+    .word {
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+@media screen and (max-width: 767px) {
 
     body {
         width: 100%;

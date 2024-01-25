@@ -196,11 +196,32 @@
 
                     .gallery_desc, .gallery_type {
                         font-size: 16px;
+                        width: 100%;
+                        padding: 10px;
+                    }
+
+                    .gallery_desc {
+                        left: 65px;
+                        top: 40px;
+                    }
+
+                    .gallery_type {
+                        top: 70px;
+                        left: 70px;
                     }
                 }
             }
         }
 
+        .gallery {
+            height: 1000px;
+        }
+
+        .gallery_bt_text {
+            font-size: 16px !important;
+            width: 100% !important;
+            right: 40px !important;
+        }
 
 
 

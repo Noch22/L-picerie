@@ -85,3 +85,30 @@
             font-family: 'Roboto';
         }
     }
+
+    @media screen and (max-width: 767px) {
+        .parent {
+            grid-template-columns: 427px;
+            width: 80%;
+            margin: 20px auto 0;
+            gap: 5px;
+        }
+
+        .child_artiste {
+            width: 80% !important;
+            border-radius: 15px;
+            .sidebar-artists {
+                width: 60%;
+            }
+
+            .content {
+                padding: 16px 24px;
+            }
+
+            img {
+                width: 341px;
+                height: auto;
+                border-radius: 15px;
+            }
+        }
+    }

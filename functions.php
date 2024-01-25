@@ -82,3 +82,12 @@ function my_login_logo_url() {
   return home_url();
 }
 add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+
+function custom_js_import() {
+  ?>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <?php
+}
+add_action('wp_head', 'custom_js_import');
