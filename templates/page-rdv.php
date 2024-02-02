@@ -42,7 +42,7 @@ get_header();
             <div class="name"><?=$event_name?></div>
             <div class="date"><?=$event_date?></div>
             <div class="action">
-                <button class="show_btn" data-id="<?= $i ?>">
+                <button class="desktop show_btn" data-id="<?= $i ?>">
                 <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <mask id="mask0_382_230" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
                                     <rect width="40" height="40" fill="#D9D9D9"/>

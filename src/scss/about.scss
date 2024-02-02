@@ -74,7 +74,23 @@
     }
 }
 
+.mobile_layout {
+    display: none !important;
+}
+
+.desktop_layout {
+    display: flex !important;
+}
+
 @media screen and (max-width: 767px) { 
+    .mobile_layout {
+        display: flex !important;
+    }
+
+    .desktop_layout {
+        display: none !important;
+    }
+
     .about {
         width: 90%;
     }

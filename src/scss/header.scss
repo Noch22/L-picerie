@@ -147,6 +147,11 @@
         .title_header {
             h2 {
                 margin-top: 0;
+                color: black;
+                font-size: 32px;
+                font-family: Roboto;
+                font-weight: 900;
+                word-wrap: break-word;
             }
             
         }
@@ -475,6 +480,20 @@
         margin-bottom: 24px;
         .content {
             padding: 8px 18px;
+        }
+
+        .top_header {
+            .title_header {
+                h2 {
+                    font-size: 24px;
+                }
+            }
+
+            .state_header {
+                p {
+                    font-size: 14px;
+                }
+            }
         }
     }
 

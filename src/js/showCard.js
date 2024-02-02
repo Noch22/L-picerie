@@ -133,30 +133,36 @@ if(document.querySelector('.sidebar-artists') !== null){
 
 
 if(document.querySelector('.sidebar-header') !== null){
-        function showsliderArtists() {
+        function showsliderHeader() {
             var sidebarheader = document.querySelector('.sidebar-header');
             sidebarheader.classList.toggle('active');
             body.classList.toggle('sidebar-active');
         }
         
         document.querySelector('.infos-pratiques').addEventListener('click', () => {
-                showsliderArtists();
+            showsliderHeader();
                 console.log('test');
             })
         
             document.querySelector('.menu_mobile .infos-pratiques').addEventListener('click', () => {
-                window.location.href = '/infos-pratiques/'
+                window.location.href = '/infos-pratiques/';
             })
 
-        document.querySelector('.sidebar_header, .close, .show_slider').addEventListener('click', () => {
-                showsliderArtists();
+        document.querySelector('.header_show_slider').addEventListener('click', () => {
+            showsliderHeader();
             })
             
-            if(document.querySelector('.toggle_sponsors') !== null){
-        document.querySelector('.toggle_sponsors').addEventListener('click', () => {
-                showsliderArtists();
+            if(document.querySelector('.desktop_layout .toggle_sponsors') !== null){
+            document.querySelector('.desktop_layout .toggle_sponsors').addEventListener('click', () => {
+            showsliderHeader();
             })
             }
+
+            if(document.querySelector('.mobile_layout .toggle_sponsors') !== null){
+                document.querySelector('.mobile_layout .toggle_sponsors').addEventListener('click', () => {
+                        window.location.href = '/infos-pratiques';
+                    })
+                    }
         
         document.addEventListener('mousedown', function(event) {
             var sidebars = document.querySelectorAll('.sidebar-header');

@@ -93,8 +93,8 @@ $custom_query = new WP_Query( $args );
     echo paginate_links(array(
         'total'    => $custom_query->max_num_pages,
         'current'  => max( 1, get_query_var( 'paged' ) ),
-        'prev_text' => '<',
-        'next_text' => '>',
+        'prev_text' => '<span id="prev_arrow"><svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.9797 11.9085L16.7381 6.7761H0.930664V5.28514H16.7381L12.9797 0.15271L24.9665 6.03062L12.9797 11.9085Z" fill="black"/></svg></span>',
+        'next_text' => '<span id="next_arrow"><svg width="25" height="12" viewBox="0 0 25 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12.9797 11.9085L16.7381 6.7761H0.930664V5.28514H16.7381L12.9797 0.15271L24.9665 6.03062L12.9797 11.9085Z" fill="black"/></svg></span>',
     ));
     echo '</div>';
 

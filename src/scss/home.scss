@@ -107,6 +107,7 @@ main {
             width: 50%;
             img {
                 border-radius: 15px 0 0 15px;
+                height: 100%;
             }
 
         }
@@ -223,7 +224,7 @@ main {
 
 }
 
-.show_slider {
+.show_slider, .header_show_slider {
     border: none;
     background: transparent;
 }
@@ -578,6 +579,7 @@ main {
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    padding: 0 20px 0;
                 }
 
                 h3 {
@@ -735,7 +737,7 @@ main {
             .facebook_footer {
                 width: 70px !important;
                 height: 70px !important;
-                transform: translateX(40%) rotateZ(25deg) !important;
+                transform: translateX(40%) rotateZ(19deg) !important;
                 padding: 20px !important;
             }
         }

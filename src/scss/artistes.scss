@@ -13,6 +13,20 @@
         height: 596px;
         background-color: black;
         position: relative;
+        transition: all 0.3s ease-in-out;
+
+        img {
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                border-radius: 20px 20px 0 0;
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        &:hover {
+            border-radius: 25px;
+            transition: all 0.3s ease-in-out;
+        }
 
         .show_slider.plus {
             path{
@@ -50,7 +64,7 @@
 
     .pagination {
         width: 1280px;
-        margin: 10px auto;
+        margin: 50px auto;
         display: flex;
         justify-content: center;
 
@@ -64,18 +78,32 @@
             text-decoration: none;
             width: 34px;
             height: 34px;
-            padding: 10px;
+            padding: 25px;
             background-color: black;
             border-radius: 50%;
             justify-content: center;
             align-items: center;
             margin: 0 5px;
+            border-color: black !important;
+            transition: all 0.3s ease-in-out;
+
+            &:not(.current, .next, .prev){
+                border: 1px solid black;
+            }
+
+            &:hover:not(.current, .next, .prev) {
+                transition: all 0.3s ease-in-out;
+                background-color: var(--white);
+                color: black;
+                border: 1px solid black;
+                border-color: black !important;
+            }
         }
 
         .current {
             color: black;
             background-color: var(--white);
-            box-shadow: -7px 10px 15px 5px rgba(0,0,0,0.41);
+            border: 1px solid black;
         }
 
         .next, .prev {
@@ -84,6 +112,33 @@
             font-size: 60px;
             font-family: 'Roboto';
         }
+
+        #prev_arrow {
+            transform: rotateY(180deg);
+
+            &:hover {
+                transform: rotateY(180deg) translateX(15px);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
+        #prev_arrow, #next_arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                
+            }
+        }
+
+        #next_arrow {
+            &:hover {
+                transform: translateX(15px);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+
     }
 
     @media screen and (max-width: 767px) {
@@ -98,7 +153,7 @@
             width: 80% !important;
             border-radius: 15px;
             .sidebar-artists {
-                width: 60%;
+                width: 80%;
             }
 
             .content {
@@ -110,5 +165,9 @@
                 height: auto;
                 border-radius: 15px;
             }
+        }
+
+        .pagination {
+            width: 100%;
         }
     }
