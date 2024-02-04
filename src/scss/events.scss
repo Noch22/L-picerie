@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: since 2010
+*/
+
 .top {
     background-color: var(--background-white);
     position: relative;
@@ -14,10 +21,16 @@
     #year {
         position: absolute;
         left: 50%;
-        transform: translateX(-50%);
+        -webkit-transform: translateX(-50%);
+           -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+             -o-transform: translateX(-50%);
+                transform: translateX(-50%);
         top: 140px;
         padding: 10px;
-        border-radius: 5px;
+        -webkit-border-radius: 5px;
+           -moz-border-radius: 5px;
+                border-radius: 5px;
         border: 1px solid #D9D9D9;
         width: 200px;
         text-align: center;

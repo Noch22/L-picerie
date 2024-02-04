@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: since 2010
+*/
+
 .page-rdv {
     background-color: var(--background-white) !important;
 }
@@ -37,29 +44,47 @@
         width: 387px;
         height: 387px;
         position: relative;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
 
         img {
             z-index: 1;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
-            border-radius: 15px;
+            -webkit-border-radius: 15px;
+               -moz-border-radius: 15px;
+                    border-radius: 15px;
         }
 
         &:hover {
             .gallery_desc {
                 display: block;
                 z-index: 2;
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
             }
 
             .gallery_type {
                 display: block;
                 z-index: 2;
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
             }
 
             img {
-                filter: brightness(10%);
+                -webkit-filter: brightness(10%);
+                        filter: brightness(10%);
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
             }
         }
@@ -83,7 +108,11 @@
         .gallery_type {
             position: absolute;
             left: 50%;
-            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+               -moz-transform: translateX(-50%);
+                -ms-transform: translateX(-50%);
+                 -o-transform: translateX(-50%);
+                    transform: translateX(-50%);
             top: 25%;
             color: white;
             font-size: 24px;
@@ -99,7 +128,11 @@
         position: absolute;
         left: 200px;
         top: 220px;
-        transform: rotate(-16deg);
+        -webkit-transform: rotate(-16deg);
+           -moz-transform: rotate(-16deg);
+            -ms-transform: rotate(-16deg);
+             -o-transform: rotate(-16deg);
+                transform: rotate(-16deg);
 
     }
 
@@ -107,7 +140,11 @@
         position: absolute;
         right: 120px;
         top: 200px;
-        transform: rotate(12deg);
+        -webkit-transform: rotate(12deg);
+           -moz-transform: rotate(12deg);
+            -ms-transform: rotate(12deg);
+             -o-transform: rotate(12deg);
+                transform: rotate(12deg);
     }
 
     #card-3 {
@@ -121,7 +158,11 @@
         position: absolute;
         left: 300px;
         top: 550px;
-        transform: rotate(9deg);
+        -webkit-transform: rotate(9deg);
+           -moz-transform: rotate(9deg);
+            -ms-transform: rotate(9deg);
+             -o-transform: rotate(9deg);
+                transform: rotate(9deg);
         z-index: 4;
         position: absolute;
         left: 150px;
@@ -132,28 +173,44 @@
         position: absolute;
         right: 100px;
         top: 750px;
-        transform: rotate(3deg);
+        -webkit-transform: rotate(3deg);
+           -moz-transform: rotate(3deg);
+            -ms-transform: rotate(3deg);
+             -o-transform: rotate(3deg);
+                transform: rotate(3deg);
     }
 
     #card-6 {
         position: absolute;
         left: 575px;
         top: 850px;
-        transform: rotate(-9deg);
+        -webkit-transform: rotate(-9deg);
+           -moz-transform: rotate(-9deg);
+            -ms-transform: rotate(-9deg);
+             -o-transform: rotate(-9deg);
+                transform: rotate(-9deg);
     }
 
     #card-7 {
         position: absolute;
         left: 250px;
         top: 1300px;
-        transform: rotate(-9deg);
+        -webkit-transform: rotate(-9deg);
+           -moz-transform: rotate(-9deg);
+            -ms-transform: rotate(-9deg);
+             -o-transform: rotate(-9deg);
+                transform: rotate(-9deg);
     }
 
     #card-8 {
         position: absolute;
         right: 300px;
         top: 1350px;
-        transform: rotate(9deg);
+        -webkit-transform: rotate(9deg);
+           -moz-transform: rotate(9deg);
+            -ms-transform: rotate(9deg);
+             -o-transform: rotate(9deg);
+                transform: rotate(9deg);
     }
 }
 
@@ -176,8 +233,11 @@
             }
 
             .gallery_container {
+                display: -ms-grid;
                 display: grid;
+                -ms-grid-columns: 120px 10px 120px 10px 120px;
                 grid-template-columns: repeat(3, 120px);
+                -ms-grid-rows: 120px;
                 grid-template-rows: 120px;
                 gap: 10px;
                 margin: 20px 10px;
@@ -186,7 +246,11 @@
                     position: relative !important;
                     width: 126px;
                     height: auto;
-                    transform: rotate(0) !important;
+                    -webkit-transform: rotate(0) !important;
+                       -moz-transform: rotate(0) !important;
+                        -ms-transform: rotate(0) !important;
+                         -o-transform: rotate(0) !important;
+                            transform: rotate(0) !important;
                     left: 0 !important;
                     top: 0 !important;
                     right: 0 !important;
@@ -214,6 +278,21 @@
                         text-align: center;
                     }
                 }
+            }
+
+            .gallery_container > *:nth-child(1) {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1
+            }
+
+            .gallery_container > *:nth-child(2) {
+            -ms-grid-row: 1;
+            -ms-grid-column: 3
+            }
+
+            .gallery_container > *:nth-child(3) {
+            -ms-grid-row: 1;
+            -ms-grid-column: 5
             }
         }
 

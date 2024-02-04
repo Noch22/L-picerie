@@ -1,4 +1,12 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: since 2010
+*/
+
 .parent {
+    display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, 427px);
     grid-template-rows: repeat(auto-fill, 596px);
@@ -13,18 +21,34 @@
         height: 596px;
         background-color: black;
         position: relative;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        -moz-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
 
         img {
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
             &:hover {
-                border-radius: 20px 20px 0 0;
+                -webkit-border-radius: 20px 20px 0 0;
+                   -moz-border-radius: 20px 20px 0 0;
+                        border-radius: 20px 20px 0 0;
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
             }
         }
 
         &:hover {
-            border-radius: 25px;
+            -webkit-border-radius: 25px;
+               -moz-border-radius: 25px;
+                    border-radius: 25px;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
         }
 
@@ -65,10 +89,22 @@
     .pagination {
         width: 1280px;
         margin: 50px auto;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
 
         .page-numbers {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
             display: flex;
             color: var(--white);
             font-size: 20px;
@@ -80,11 +116,24 @@
             height: 34px;
             padding: 25px;
             background-color: black;
-            border-radius: 50%;
-            justify-content: center;
-            align-items: center;
+            -webkit-border-radius: 50%;
+               -moz-border-radius: 50%;
+                    border-radius: 50%;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+               -moz-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+               -moz-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
             margin: 0 5px;
             border-color: black !important;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
 
             &:not(.current, .next, .prev){
@@ -92,6 +141,9 @@
             }
 
             &:hover:not(.current, .next, .prev) {
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
                 background-color: var(--white);
                 color: black;
@@ -114,27 +166,53 @@
         }
 
         #prev_arrow {
-            transform: rotateY(180deg);
+            -webkit-transform: rotateY(180deg);
+               -moz-transform: rotateY(180deg);
+                    transform: rotateY(180deg);
 
             &:hover {
-                transform: rotateY(180deg) translateX(15px);
+                -webkit-transform: rotateY(180deg) translateX(15px);
+                   -moz-transform: rotateY(180deg) translateX(15px);
+                        transform: rotateY(180deg) translateX(15px);
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
             }
         }
 
         #prev_arrow, #next_arrow {
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+               -moz-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+               -moz-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
             transition: all 0.3s ease-in-out;
-            &:hover {
-                
-            }
         }
 
         #next_arrow {
             &:hover {
-                transform: translateX(15px);
+                -webkit-transform: translateX(15px);
+                   -moz-transform: translateX(15px);
+                    -ms-transform: translateX(15px);
+                     -o-transform: translateX(15px);
+                        transform: translateX(15px);
+                -webkit-transition: all 0.3s ease-in-out;
+                -o-transition: all 0.3s ease-in-out;
+                -moz-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
             }
         }
@@ -143,6 +221,7 @@
 
     @media screen and (max-width: 767px) {
         .parent {
+            -ms-grid-columns: 427px;
             grid-template-columns: 427px;
             width: 80%;
             margin: 20px auto 0;
@@ -151,7 +230,9 @@
 
         .child_artiste {
             width: 80% !important;
-            border-radius: 15px;
+            -webkit-border-radius: 15px;
+               -moz-border-radius: 15px;
+                    border-radius: 15px;
             .sidebar-artists {
                 width: 80%;
             }
@@ -163,7 +244,9 @@
             img {
                 width: 341px;
                 height: auto;
-                border-radius: 15px;
+                -webkit-border-radius: 15px;
+                   -moz-border-radius: 15px;
+                        border-radius: 15px;
             }
         }
 
