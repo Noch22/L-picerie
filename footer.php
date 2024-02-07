@@ -4,8 +4,11 @@ $facebook = get_field('facebook', 'options');
 $actual_year = intval(get_term(get_field('annee_en_cours', 'options'))->name);
 $next_year = intval($actual_year) + 1;
 $year = str_split($actual_year)['2'] . str_split($actual_year)['3'] . '-' . str_split($next_year)['2'] . str_split($next_year)['3'];
+
+$year_now = str_split($actual_year)['2'] . str_split($actual_year)['3'];
+$year_after = str_split($next_year)['2'] . str_split($next_year)['3'];
 ?>
-<footer>
+<footer <?php echo $pagename == 'rendez-vous' ? 'class="rdv_footer"' : ' '?>>
     <div class="parent_footer">
 
         <a href="<?= $instagram ?>" target="_blank">
@@ -18,7 +21,11 @@ $year = str_split($actual_year)['2'] . str_split($actual_year)['3'] . '-' . str_
         </a>
         <div class="text_footer">
             <div id="saison">Saison</div>
-            <div id="year"><?= $year ?></div>
+            <div id="year">
+                <span><?= $year_now ?></span>
+                <span>-</span>
+                <span id="after_year"><?= $year_after ?></span>
+            </div>
         </div>
 
         <a href="<?= $facebook ?>" target="_blank">
@@ -30,5 +37,7 @@ $year = str_split($actual_year)['2'] . str_split($actual_year)['3'] . '-' . str_
             </div>
         </a>
     </div>
-    <div class="footer_links"></div>
+    <div class="footer_links">
+        <a href="<?= get_site_url() . "/mentions-legales/" ?>">Mentions Légales</a>
+    </div>
 </footer>

@@ -5,6 +5,8 @@ import './main.scss'
 import Router from './utils/Router'
 import './js/showCard'
 import './js/header'
+import './js/eventsPage'
+import './js/homepage'
 
 // Small router inspired from Sage framework, which use body class from WordPress
 // can be a class or a simple function, class can be called dynamically, just need a init method 

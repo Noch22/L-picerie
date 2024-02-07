@@ -1,60 +1,195 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: since 2010
+*/
+
 footer {
     width: 100%;
-    height: 15vw;
     background-color: var(--background-white);
-
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+       -moz-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+       -moz-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+       -moz-box-orient: vertical;
+       -moz-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
     .parent_footer {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
         display: flex;
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+           -moz-box-orient: horizontal;
+           -moz-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
         width: 1280px;
-        margin: 0 auto;
+        margin: 80px auto 0;
         position: relative;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
 
         .insta_footer {
-            position: absolute;
-            top: 100;
-            left: 400;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
             background-color: var(--black);
-            padding: 3vh;
-            border-radius: 50%;
+            padding: 20px;
+            -webkit-border-radius: 50%;
+               -moz-border-radius: 50%;
+                    border-radius: 50%;
+            -webkit-transform: translateX(-50%) rotateZ(355deg);
+               -moz-transform: translateX(-50%) rotateZ(355deg);
+                -ms-transform: translateX(-50%) rotate(355deg);
+                 -o-transform: translateX(-50%) rotateZ(355deg);
+                    transform: translateX(-50%) rotateZ(355deg);
+            
         }
 
         .facebook_footer {
-            position: absolute;
-            top: 50;
-            right: 400;
-            height: 5vh;
-            width: 5vh;
+            height: 91px;
+            width: 91px;
             background-color: var(--black);
-            padding: 4vh;
-            border-radius: 25%;
-            justify-content: center;
-            align-items: center;
+            padding: 25px;
+            -webkit-border-radius: 25%;
+               -moz-border-radius: 25%;
+                    border-radius: 25%;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+               -moz-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+            -webkit-align-items: center;
+               -moz-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-transform: translateX(50%) rotateZ(9deg);
+               -moz-transform: translateX(50%) rotateZ(9deg);
+                -ms-transform: translateX(50%) rotate(9deg);
+                 -o-transform: translateX(50%) rotateZ(9deg);
+                    transform: translateX(50%) rotateZ(9deg);
         }
 
         .text_footer {
             font-family: 'Swomun', serif;
+            position: relative;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -webkit-flex-direction: column;
+               -moz-box-orient: vertical;
+               -moz-box-direction: normal;
+                -ms-flex-direction: column;
+                    flex-direction: column;
+            line-height: 1;
 
             #saison {
-                position: absolute;
-                top: 50;
-                left: 550;
                 color: var(--grey);
                 font-size: 60px;
                 font-weight: 400;
             }
 
             #year {
-                position: absolute;
-                top: 120;
-                left: 550;
                 color: var(--grey);
                 font-size: 60px;
                 font-weight: 400;
-                transform: rotateZ(9deg);
             }
+
+            #after_year {
+                margin: 15px 10px 0;
+                position: absolute;
+            }
+        }
+    }
+
+    .footer_links {
+        font-family: 'Roboto', sans-serif;
+        width: 1280px;
+        margin: 64px auto 16px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+           -moz-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+           -moz-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+       a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+            color: black;
+            text-decoration: underline;
+        }
+       }
+    }
+}
+
+.rdv_footer {
+    background-color: var(--back-rdv) !important;
+
+    .insta_footer {
+        background-color: var(--white) !important;
+
+        path {
+            fill: var(--black) !important;
+        }
+    }
+
+    .facebook_footer {
+        background-color: var(--white) !important;
+
+        path {
+            fill: var(--black) !important;
         }
     }
 }

@@ -1,0 +1,1 @@
+<img src="<?= $content['logo']['sizes']['sponsor-logo']?>" alt="<?= $content['logo']['alt'] ?>" width="<?= $content['logo']['sizes']['sponsor-logo-width']?>" height="<?= $content['logo']['sizes']['sponsor-logo-height']?>">

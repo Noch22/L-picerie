@@ -28,7 +28,10 @@ function load_scripts_and_style()
   add_image_size('expo-thumbnail', 630, 670, ['center', 'center']);
   add_image_size('cover-banner', 1920, 1080, ['center', 'center']);
   add_image_size('slider-image', 500, 281, ['center', 'center']);
-
+  add_image_size('gallery-img', 387, 387, ['center', 'center']);
+  add_image_size('artists-img', 427, 455, ['center', 'center']);
+  add_image_size('banner-about', 884, 497, ['center', 'center']);
+  add_image_size('sponsor-logo', 228, 228, ['center', 'center']);
 
 // ADD MENU 
 function custom_register_nav_menu(){
@@ -60,3 +63,31 @@ add_theme_support( 'custom-logo', [
     die();
   }
   
+  add_theme_support( 'title-tag' );
+
+  function my_login_logo() { ?>
+    <style type="text/css">
+        #login h1 a, .login h1 a {
+            background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/src/img/logo_home.png);
+		        height: 80px;
+            width: 80px;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+<?php }
+add_action( 'login_enqueue_scripts', 'my_login_logo' );
+
+function my_login_logo_url() {
+  return home_url();
+}
+add_filter( 'login_headerurl', 'my_login_logo_url' );
+
+
+function custom_js_import() {
+  ?>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://unpkg.com/split-type"></script>
+  <?php
+}
+add_action('wp_head', 'custom_js_import');
