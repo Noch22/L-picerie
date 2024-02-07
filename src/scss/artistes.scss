@@ -226,6 +226,8 @@
             width: 80%;
             margin: 20px auto 0;
             gap: 5px;
+            align-items: center;
+            justify-content: center;
         }
 
         .child_artiste {
@@ -233,6 +235,7 @@
             -webkit-border-radius: 15px;
                -moz-border-radius: 15px;
                     border-radius: 15px;
+            margin: 0 auto;
             .sidebar-artists {
                 width: 80%;
             }

@@ -593,6 +593,10 @@
 }
 
 @media screen and (max-width: 767px) {
+    .sidebar-header {
+        display: none !important;
+    }
+
     .vertical_bar {
         display: none;
     }

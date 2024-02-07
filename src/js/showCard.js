@@ -1,4 +1,3 @@
-console.log('ShowCard loaded');
 
 function showcard(eventIndex) {
     var descriptionClass = 'description-' + eventIndex;
@@ -9,7 +8,6 @@ function showcard(eventIndex) {
 
 document.querySelectorAll('button.desktop.show_btn').forEach((buttonElement) => {
     const id = buttonElement.dataset.id;
-    console.log(buttonElement);
     buttonElement.addEventListener('click', () => {
         showcard(id);
         buttonElement.classList.toggle('rotate');
@@ -25,7 +23,6 @@ function showcardMobile(eventIndex) {
     var card = document.querySelector('.mobile.grid.wrapper' + '.' + descriptionClass);
     //card.classList.toggle('active');
     card.classList.toggle('open');
-    console.log(card);
 }
 
 document.querySelectorAll('button.mobile.show_btn').forEach((buttonElement) => {
@@ -33,7 +30,6 @@ document.querySelectorAll('button.mobile.show_btn').forEach((buttonElement) => {
     buttonElement.addEventListener('click', () => {
         showcardMobile(id);
         buttonElement.classList.toggle('rotate');
-        console.log("button mobile clicked");
     })
     
 }) 
@@ -58,7 +54,6 @@ document.querySelectorAll('button.show_slider').forEach((buttonElement) => {
 
 document.addEventListener('mousedown', function(event) {
     var sidebars = document.querySelectorAll('.sidebar');
-    console.log(event);
 
     // Vérifier si le clic est à l'intérieur de l'un des sidebars et que le sidebar est actif
     var isInsideSidebar = Array.from(sidebars).some(function(sidebar) {
@@ -80,9 +75,6 @@ document.addEventListener('mousedown', function(event) {
 document.querySelector('.sidebar').addEventListener('mousedown', function(event) {
     event.stopPropagation();
 });
-
-
-console.log(document.querySelectorAll('button.show_btn'))
 }
 
 
@@ -104,7 +96,6 @@ if(document.querySelector('.sidebar-artists') !== null){
     
     document.addEventListener('mousedown', function(event) {
         var sidebars = document.querySelectorAll('.sidebar-artists');
-        console.log(event);
     
         // Vérifier si le clic est à l'intérieur de l'un des sidebars et que le sidebar est actif
         var isInsideSidebar = Array.from(sidebars).some(function(sidebar) {
@@ -126,9 +117,6 @@ if(document.querySelector('.sidebar-artists') !== null){
     document.querySelector('.sidebar-artists').addEventListener('mousedown', function(event) {
         event.stopPropagation();
     });
-    
-    
-    console.log(document.querySelectorAll('.child_artiste'))
     }
 
 
@@ -141,7 +129,6 @@ if(document.querySelector('.sidebar-header') !== null){
         
         document.querySelector('.infos-pratiques').addEventListener('click', () => {
             showsliderHeader();
-                console.log('test');
             })
         
             document.querySelector('.menu_mobile .infos-pratiques').addEventListener('click', () => {
@@ -166,7 +153,6 @@ if(document.querySelector('.sidebar-header') !== null){
         
         document.addEventListener('mousedown', function(event) {
             var sidebars = document.querySelectorAll('.sidebar-header');
-            console.log(event);
         
             // Vérifier si le clic est à l'intérieur de l'un des sidebars et que le sidebar est actif
             var isInsideSidebar = Array.from(sidebars).some(function(sidebar) {

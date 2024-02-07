@@ -5,6 +5,10 @@
 * Browsers: since 2010
 */
 
+.grecaptcha-badge { 
+    visibility: hidden !important;
+}
+
 * {
     margin: 0;
     padding: 0;

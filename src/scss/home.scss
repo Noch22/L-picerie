@@ -745,6 +745,7 @@ main {
     }
 
         .home_div_text {
+            margin-left: 0 !important;
             width: 100%;
             h1 {
                 font-size: 38px;
@@ -884,14 +885,7 @@ main {
         }
 
         #badge {
-            width: 120px !important;
-            -webkit-transform: translateY(-355px) translateX(100%);
-               -moz-transform: translateY(-355px) translateX(100%);
-                -ms-transform: translateY(-355px) translateX(100%);
-                 -o-transform: translateY(-355px) translateX(100%);
-                    transform: translateY(-355px) translateX(100%);
-            font-size: 14px !important;
-            position: absolute;
+            display: none;
         }
 
         .wrap_center {
@@ -1059,11 +1053,11 @@ main {
             .facebook_footer {
                 width: 70px !important;
                 height: 70px !important;
-                -webkit-transform: translateX(40%) rotateZ(19deg) !important;
-                   -moz-transform: translateX(40%) rotateZ(19deg) !important;
-                    -ms-transform: translateX(40%) rotate(19deg) !important;
-                     -o-transform: translateX(40%) rotateZ(19deg) !important;
-                        transform: translateX(40%) rotateZ(19deg) !important;
+                -webkit-transform: translateX(30%) rotateZ(19deg) !important;
+                   -moz-transform: translateX(30%) rotateZ(19deg) !important;
+                    -ms-transform: translateX(30%) rotate(19deg) !important;
+                     -o-transform: translateX(30%) rotateZ(19deg) !important;
+                        transform: translateX(30%) rotateZ(19deg) !important;
                 padding: 20px !important;
             }
         }

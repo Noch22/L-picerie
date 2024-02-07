@@ -29,7 +29,6 @@ close.addEventListener('click', () => {
 
 document.addEventListener('mousedown', function(event) {
   var menu = document.querySelectorAll('.menu_mobile');
-  console.log(event);
 
   // Vérifier si le clic est à l'intérieur de l'un des sidebars et que le sidebar est actif
   var isInsideSidebar = Array.from(menu).some(function(sidebar) {

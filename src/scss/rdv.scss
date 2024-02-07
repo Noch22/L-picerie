@@ -233,14 +233,15 @@
             }
 
             .gallery_container {
-                display: -ms-grid;
                 display: grid;
-                -ms-grid-columns: 120px 10px 120px 10px 120px;
-                grid-template-columns: repeat(3, 120px);
-                -ms-grid-rows: 120px;
+                grid-template-columns: repeat(2, 120px);
                 grid-template-rows: 120px;
+                grid-gap: 10px;
                 gap: 10px;
                 margin: 20px 10px;
+                justify-content: center;
+                align-items: center;
+}
 
                 .img {
                     position: relative !important;
@@ -305,7 +306,3 @@
             width: 100% !important;
             right: 40px !important;
         }
-
-
-
- }
